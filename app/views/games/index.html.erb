@@ -1,0 +1,20 @@
+<header>
+  <h1><%= @data[:header][:text] %></h1>
+  <img src="<%= @data[:header][:image] %>">
+</header>
+
+<article>
+  <p>
+    <%= @data[:content][:main_text] %>
+  </p>
+
+  <ol>
+    <% @games.each do |game| %>
+      <li><%= link_to game.name, game_path(game.id) %></li>
+    <% end %>
+  </ol>
+</article>
+
+<footer>
+  <%= @data[:footer][:text] %>
+</footer>

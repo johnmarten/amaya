@@ -1,0 +1,12 @@
+<header>
+  <h2><%= @game.name %></h2>
+  <img src="<%= @game.image %>">
+</header>
+
+<article>
+  <p>
+    <%= @game.description %>
+  </p>
+</article>
+
+<%= link_to 'Back', games_path %>
